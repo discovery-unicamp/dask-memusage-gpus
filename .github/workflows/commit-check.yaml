@@ -13,6 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: commit-check/commit-check-action@v1
+        env:
+          GH_TOKEN: ${{ github.token }}
         with:
           # we don't need message conventions right now
           message: false
